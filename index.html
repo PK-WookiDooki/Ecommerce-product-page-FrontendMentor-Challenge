@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="navbar">
+          <div class="navbar-nav">
+            <button class="menuI" id="menuBtn">
+              <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+                  fill="#69707D"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <a href="#" class="brand"> sneakers </a>
+
+            <ul class="nav">
+              <button class="closeI" id="closeBtn">
+                <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                    fill="#69707D"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link active"> Collections </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Men </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Women </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> About </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+          <div class="profile">
+            <a href="#" id="cartBtn">
+              <svg width="22" height="20" class="cartIcon" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#69707D"
+                  fill-rule="nonzero"
+                />
+              </svg>
+
+              <span class="badge"></span>
+            </a>
+            <div class="cart">
+              <p>Cart</p>
+
+              <div class="emptyCart">
+                <p>Your cart is Empty!</p>
+              </div>
+              <div class="itemBox">
+                <div class="itemImage">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+                </div>
+                <div class="itemPrice">
+                  <small>
+                    <p>Fall Limited Edition Sneakers</p>
+
+                    <span> $125.00 x </span>
+                    <span id="totalI"> </span>
+
+                    <span class="totalAmount">
+                      $
+                      <span id="totalP"></span>
+                    </span>
+                  </small>
+                </div>
+                <div class="dBtn">
+                  <button class="deleteBtn">
+                    <svg
+                      width="14"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <defs>
+                        <path
+                          d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z"
+                          id="a"
+                        />
+                      </defs>
+                      <use fill="#ff0000" fill-rule="nonzero" xlink:href="#a" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button id="cBtn">Checkout</button>
+            </div>
+            <img src="./images/image-avatar.png" alt="" />
+          </div>
+        </div>
+      </nav>
+
+      <section class="content">
+        <div class="itemImages">
+          <div class="previewImage" id="previewImage">
+            <img
+              src="./images/image-product-1.jpg"
+              alt=""
+              class="pImage active"
+            />
+            <img src="./images/image-product-2.jpg" alt="" class="pImage" />
+            <img src="./images/image-product-3.jpg" alt="" class="pImage" />
+            <img src="./images/image-product-4.jpg" alt="" class="pImage" />
+
+            <div class="controls">
+              <button id="prev">
+                <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11 1 3 9l8 8"
+                    stroke="#1D2026"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <button id="next">
+                <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m2 1 8 8-8 8"
+                    stroke="#1D2026"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- <div class="controls">
+          <button id="prev">
+            <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+          <button id="next">
+            <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </button>
+        </div> -->
+          <div class="iconImages">
+            <a class="imageLink active" id="image1">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            </a>
+            <a class="imageLink" id="image2">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            </a>
+            <a class="imageLink" id="image3">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            </a>
+            <a class="imageLink" id="image4">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="itemDetails">
+          <div class="descriptions">
+            <h5>SNEAKER COMPANY</h5>
+            <h2>Fall Limited Edition <br />Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+          </div>
+          <div class="price">
+            <div class="discount">
+              <span>$ <span id="salePrice">125.00</span> </span>
+              <span>50%</span>
+            </div>
+            <span>$250.00</span>
+          </div>
+
+          <div class="addToCart">
+            <div class="quantity">
+              <span id="minus">-</span>
+              <span id="itemCount">0</span>
+              <span id="plus">+</span>
+            </div>
+            <button id="buyBtn">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#fff"
+                  fill-rule="nonzero"
+                />
+              </svg>
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="previewBox">
+        <div class="btn">
+          <button class="prevCloseI" id="prevCloseBtn">
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                fill="#ffffff"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="previewBoxImage">
+          <div class="previewImage">
+            <img
+              src="./images/image-product-1.jpg"
+              alt=""
+              class="prevImage active"
+            />
+            <img src="./images/image-product-2.jpg" alt="" class="prevImage" />
+            <img src="./images/image-product-3.jpg" alt="" class="prevImage" />
+            <img src="./images/image-product-4.jpg" alt="" class="prevImage" />
+
+            <div class="prevControls">
+              <button id="prevBox">
+                <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11 1 3 9l8 8"
+                    stroke="#ff7d14"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <button id="nextBox">
+                <svg width="15" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m2 1 8 8-8 8"
+                    stroke="#ff7d14"
+                    stroke-width="3"
+                    fill="none"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="iconImages">
+            <a class="prevImageLink active" id="image1">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            </a>
+            <a class="prevImageLink" id="image2">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+            </a>
+            <a class="prevImageLink" id="image3">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+            </a>
+            <a class="prevImageLink" id="image4">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="background"></div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
