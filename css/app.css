@@ -408,8 +408,17 @@
 
  .background.active{
     display: block;
+    font-size: 18px;
 }
 
+.attribution{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
 
 @media screen and (max-width: 600px ) {
 
